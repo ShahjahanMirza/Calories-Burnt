@@ -1,11 +1,11 @@
 import pandas as pd
-import pickle
+import joblib
 import streamlit as st
 import numpy as np
 
 st.title('Calculate Your Burnt Calories')
 
-model = pickle.load(open('calories_burnt_model.pkl', 'rb'))
+model = joblib.load('calories_burnt_model.pkl')
 
 # background image
 def add_bg_from_url():
